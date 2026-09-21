@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+</head>
+<body>
+  <div class ="container">
+    <div class ="header">
+        <h1>E-commerce</h1>
+    </div>
+    <div class="sidebar">name: Deploy Website
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Website
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: '.'
+
+      - name: Deploy Website
+        id: deployment
+        uses: actions/deploy-pages@v4
+        <ul>
+            <li>about us</li>
+            <li>contact</li>
+            <li>about us</li>
+            <li>contact</li>
+            <li>about us</li>
+            <li>contact</li>
+         </ul>
+         </div>
+         <div class="main">
+        <div class="product">
+            <img src="flower3.jpg" alt="flower">
+            <h4>product</h4>
+            <p>$19.99</p>
+        </div>
+        <div class="product">
+            <img src="flower4.jpg" alt="flower">
+            <h4>product</h4>
+            <p>$19.99</p>
+         </div>
+        <div class="product">
+            <img src="flower2.jpg" alt="flower">
+            <h4>product</h4>
+            <p>$19.99</p>
+        </div>
+        <div class="product">
+            <img src="flower.jpg" alt="flower">
+            <h4>product</h4>
+            <p>$19.99</p>
+            </div>
+        <div class="product">
+            <img src="flower3.jpg" alt="flower">
+            <h4>product</h4>
+            <p>$19.99</p>
+            </div>
+    </div>
+    <div class="footer">&copy; 2023 E-commerce. All rights reserved.</div>
+  </div>
+</body>
+</html>
